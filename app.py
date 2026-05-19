@@ -278,9 +278,11 @@ with tab2:
 
     st.subheader("🩺 Machine Health Dashboard")
 
+    machine_list = sorted(filtered_df["Machine_ID"].unique())
+
     selected_machine = st.selectbox(
-        "Select Machine",
-        filtered_df["Machine_ID"].unique(),
+         "Select Machine",
+          machine_list,
     )
 
     machine_df = filtered_df[
